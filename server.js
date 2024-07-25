@@ -8,6 +8,10 @@ const PORT = 3000;
 
 app.use(express.static("public"));
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 app.get("posts", (req, res) => {
   const postsDir = path.join(__dirname, "posts");
   fs.readdir(postsDir, (error, files) => {
