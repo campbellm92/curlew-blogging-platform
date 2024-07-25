@@ -2,7 +2,7 @@ async function loadTemplates(selector, url) {
   try {
     const response = await fetch(url);
     if (!response) {
-      throw new Error("No network response");
+      throw new Error("Network not responding.");
     }
     const data = await response.text();
     document.querySelector(selector).innerHTML = data;
