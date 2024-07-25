@@ -29,6 +29,7 @@ header {
 header a {
   margin-right: 16px;
   text-decoration: none;
+  color: inherit;
 }
 
 .main-content {
