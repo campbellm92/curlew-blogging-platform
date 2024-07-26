@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const postList = document.querySelector(".posts-list");
     posts.forEach((post) => {
       const postItem = document.createElement("li");
+      postItem.style.cssText = "margin-bottom: 24px;";
       const a = document.createElement("a");
       a.href = `/post?file=${post.file}`;
       a.textContent = post.title;
+      a.style.cssText = "color: white; text-decoration: none;";
       postItem.appendChild(a);
       postList.appendChild(postItem);
     });
