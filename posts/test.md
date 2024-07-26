@@ -30,10 +30,12 @@ You can add images with inline HTML:
 
 <img src="/assets/images/curlew.jpg" alt="It's a curlew!" width="200" />
 
-Here is a block of code in JavaScript:
+Here is a block of JavaScript code:
 
 ```javascript
 function sayHello(name) {
   console.log(`Hello ${name}!`);
 }
 ```
+
+Voilà. Happy blogging!
