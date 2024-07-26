@@ -2,12 +2,10 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const { marked } = require("marked");
-const markdownCodeHighlighter = require("./config/markdownCodeHighlighter");
+
 const app = express();
 
 const PORT = 3000;
-
-markdownCodeHighlighter();
 
 app.use(express.static("public"));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
