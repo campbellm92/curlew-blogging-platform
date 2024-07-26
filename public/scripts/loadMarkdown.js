@@ -4,16 +4,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (postId) {
     try {
       const response = await fetch(`/posts/${postId}`);
-      if (!response) {
+      if (!response.ok) {
         throw new Error("Failed to fetch post content");
       }
       const markdownContent = await response.text();
       document.querySelector(".main-content").innerHTML = markdownContent;
-      document.querySelectorAll("pre code").forEach((block) => {
-        hljs.highlightBlock(block);
-      });
+      hljs.highlightAll();
     } catch (error) {
-      console.log("Error loading post", error);
+      console.error("Error loading post", error);
     }
   }
 });
