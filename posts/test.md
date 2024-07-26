@@ -14,10 +14,6 @@ _This is italicised text_
 
 > This is a block quote
 
-> You can also do block quotes with multiple paragraphs
->
-> Like so.
-
 1. This
 2. is
 3. a
@@ -30,16 +26,14 @@ _This is italicised text_
 - unordered
 - list
 
-You can add images:
+You can add images with inline HTML:
 
-![It's a curlew!](/public/assets/images/curlew.jpg)
+<img src="/assets/images/curlew.jpg" alt="It's a curlew!" width="200" />
 
 Here is a block of code in JavaScript:
 
-```
-
+```javascript
 function sayHello(name) {
   console.log(`Hello ${name}!`);
 }
-
 ```
