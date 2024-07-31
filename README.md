@@ -12,9 +12,10 @@ Questa guida presuppone che tu usi VS Code.
 2. Fai click su "Codice" sopra, poi SSH. Copia il codice.
 3. Apri un nuovo terminale su VS Code e scrivi (senza virgolette) "git clone" seguito dal codice che hai copiato. Esegui il comando.
 4. Rinomina il progetto con un nome che si adatta al tuo progetto.
-5. Poi scrivi "npm install" nel terminale per installare le dipendenze.
-6. Apri il package.json e modificalo per adattarlo al tuo progetto.
-7. Sei prontə per iniziare il tuo blog!
+5. Scrivi "rm -rf .git" nel terminale per rimuovere la cronologia Git.
+6. Poi scrivi "npm install" nel terminale per installare le dipendenze.
+7. Apri il package.json e modificalo per adattarlo al tuo progetto.
+8. Sei prontə per iniziare il tuo blog!
 
 Per creare nuovi post:
 
