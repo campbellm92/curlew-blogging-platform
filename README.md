@@ -1,10 +1,10 @@
-## Curlew blogging platform
+# Curlew blogging platform
 
 Questo è una piattaforma di blogging realizzata con Express e Marked (una libreria JavaScript per convertire Markdown in HTML).
 
 La piattaforma è soprattutto per developer con conoscenza di Express. È libera di essere riprodotta e modificata.
 
-# Guida utente
+## Guida utente
 
 Questa guida presuppone che tu usi VS Code.
 
