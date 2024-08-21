@@ -32,18 +32,12 @@ header a {
   color: inherit;
 }
 
+.nav-link {
+  color: #fafad2;
+}
+
 .main-content {
   flex-grow: 1;
-}
-
-.main-content a {
-  color: #fafad2;
-  text-decoration: none;
-}
-
-.main-content a:hover {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
 }
 
 .blog-posts-heading {
@@ -51,10 +45,19 @@ header a {
 }
 
 .posts-list {
-  margin: 0;
+  margin-bottom: 0;
   padding: 0;
   list-style-type: none;
-  color: white;
+  color: #fafad2;
+}
+
+.posts-list li {
+  margin-bottom: 24px;
+}
+
+.posts-list a {
+  text-decoration: none;
+  color: inherit;
 }
 
 footer {
@@ -63,6 +66,12 @@ footer {
   padding: 16px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-icon {
