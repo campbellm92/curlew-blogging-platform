@@ -5,13 +5,21 @@ const { marked } = require("marked");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.static("public"));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/guide", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "guide.html"));
+});
+
+app.get("/deploy", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "deploy.html"));
 });
 
 app.get("/posts", (req, res) => {
