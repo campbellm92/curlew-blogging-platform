@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Curlew Minimal Blogging</title>
+    <link rel="icon" type="image/x-icon" href="assets/curlew-favicon.svg" />
+  </head>
+  <body>
+    <div class="header-content"></div>
+    <!--Placeholder for header content (loaded w/JS) -->
+    <div class="main-content">
+      <h2>User guide</h2>
+      <p>
+        To use Curlew, you'll want to have basic familiarity with the following
+        technologies:
+      </p>
+      <ul>
+        <li>
+          <a href="https://code.visualstudio.com/Download"
+            >Visual Studio Code:</a
+          >
+          most basically for writing the .md files for blog posts.
+        </li>
+        <li>
+          <a href="https://www.markdownguide.org/basic-syntax/">Markdown:</a>
+          for writing blog posts.
+        </li>
+        <li>
+          Enough HTML to remove/change in the platform release you've
+          downloaded.
+        </li>
+        <li>Enough CSS to change the styling if you want to.</li>
+      </ul>
+      <p>If that doesn't sound too bad, follow these steps:</p>
+      <ol>
+        <li>
+          Download the latest version: <br />
+          Visit the
+          <a
+            href="https://github.com/campbellm92/curlew-blogging-platform/releases"
+            >releases page</a
+          >
+          on GitHub to download the latest version of the app.
+        </li>
+        <li>
+          Unzip the folder: <br />
+          Unzip the folder wherever you'd like the app installed/wherever your
+          working directory will be. Rename it if you want to.
+        </li>
+        <li>
+          Open the project with VS Code:
+          <br />
+          Open the unzipped folder in VS Code. You can do this by right clicking
+          on the folder and selecting 'Open with VS Code', or simply by going to
+          File > Open Folder in VSCode.
+        </li>
+        <li>
+          Install dependencies:
+          <br />
+          Go to the top menu and open a new terminal (Terminal > New Terminal).
+          In the terminal window that appears, run 'npm install' to install the
+          necessary dependencies.
+        </li>
+      </ol>
+      <p>
+        From there, you're basically good to go. You can add posts in the
+        'posts' directory with the file extension '.md'. Writing Markdown is
+        pretty simple, and you can find a guide to the syntax
+        <a href="https://www.markdownguide.org/basic-syntax/">here</a>. You can
+        also feel free to remove any HTML pages you don't want and change the
+        styling in CSS.
+      </p>
+      <p>
+        If you'd like to find out how you can deploy your blog to an actual live
+        domain, visit the <a href="../deploy.html">deploy</a> page.
+      </p>
+      <p>Happy blogging!</p>
+    </div>
+    <div class="footer-content"></div>
+    <!--Placeholder for footer content (loaded w/JS) -->
+
+    <script src="/scripts/loadTemplates.js" defer></script>
+  </body>
+</html>
