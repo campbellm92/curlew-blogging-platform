@@ -4,7 +4,7 @@ Your blog post will be here.
 
 If you'd like to find out more about markdown syntax, follow this link: <https://www.markdownguide.org/basic-syntax/>
 
-Here nevertheless are some formatting essentials:
+Here nevertheless a preview of what your blog posts could look like:
 
 **This is bolded text**.
 
