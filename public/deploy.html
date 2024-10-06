@@ -20,8 +20,106 @@
         <a
           href="https://medium.com/@alisdair_/top-heroku-alternatives-in-2024-6d6831cb6e08"
           >alternatives</a
-        >, but Heroku is what I use for the moment. There is probably a decent
-        amount of overlap in deploying a website with other providers, though.
+        >, but Heroku is what I use for the moment, mostly because the app that
+        we're deploying is essentially a Node.js app, which works well with
+        Heroku.
+      </p>
+      <p>
+        You're also probably going to want to register a domain. I'm in Italy
+        and I use IONOS, but feel free to choose whichever provider suits your
+        budget or whatever other considerations you want to take into account.
+      </p>
+
+      <p>
+        This guide assumes there is probably a decent amount of overlap in
+        deploying a website with providers other than Heroku and IONOS. There is
+        also some light usage of Git and the command line, but I'll cover
+        everything you need to know.
+      </p>
+
+      <p>Without further ado, here's the guide in two parts.</p>
+      <p>Creating a Heroku app:</p>
+      <ol>
+        <li>
+          Visit the Heroku
+          <a href="https://signup.heroku.com/">signup page</a> and make an
+          account.
+        </li>
+        <li>
+          Install Heroku: <br />
+          You'll need to install the Heroku CLI (Command Line Interface) in
+          order to deploy your project. Instructions for various operating
+          systems can be found
+          <a
+            href="https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli"
+            >here</a
+          >.
+        </li>
+        <li>
+          Login to Heroku in the terminal: <br />
+          Run <strong>heroku login</strong> in the terminal and enter your login
+          details when the window pops up.
+        </li>
+        <li>
+          Initialise a Git repository:
+          <br />
+          A Git repository is required to use Heroku. Run these commands in your
+          project root directory:
+          <br />
+          <strong>git init</strong>
+          <br />
+          <strong>git add .</strong>
+          <br />
+          <strong>git commit -m "initial commit"</strong>
+        </li>
+        <li>
+          Create a Heroku app:
+          <br />
+          In the Heroku CLI, run
+          <strong>heroku create your-app-name</strong>.
+        </li>
+        <li>
+          Deploy your app to Heroku:
+          <br />
+          Then, in the terminal run
+          <strong>git push heroku main</strong>. If that doesn't work, change
+          'main' to 'master'.
+        </li>
+      </ol>
+      <p>Connecting your Heroku app to your domain name:</p>
+
+      <ol>
+        <li>
+          Add your domain:
+          <br />
+          Find your new app in your Heroku account on the Heroku website. Go to
+          Settings, then scroll down to the Domains section and click 'Add
+          domain'. You don't need to put the protocol (https) or www. At this
+          point you'll also want to copy the value that you see under 'DNS
+          Target'. target
+        </li>
+        <li>
+          Configure DNS:
+          <br />
+          Your domain name provider should have a section (possibly under
+          Settings) where you can view DNS (Domain Name System) configurations.
+          Create a new (or edit the existing) CNAME record and paste the DNS
+          Target value you copied from the previous step into the 'Points to'
+          field. You shouldn't need to do anything with the other fields. Save
+          the record.
+        </li>
+        <li>
+          Add an SSL Certificate:
+          <br />
+          Head back to Heroku and on the same page where you added your domain,
+          find and click on 'Configure SSL'. Here you can choose the automatic
+          option or add your own SSL as you see fit.
+        </li>
+      </ol>
+      <p>
+        Your site should now be live! Sometimes DNS changes and SSL certificates
+        can take a bit of time to implement, so if it doesn't work straight
+        away, give it a bit of time and try again.
       </p>
     </div>
     <div class="footer-content"></div>
