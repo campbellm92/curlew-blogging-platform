@@ -1,29 +1,11 @@
 # Curlew blogging platform
 
-Questo è una piattaforma di blogging realizzata con Express e Marked (una libreria JavaScript per convertire Markdown in HTML).
+Curlew is a lightweight blogging platform that allows users to write blog posts in markdown files, which are then converted into HTML.
 
-La piattaforma è soprattutto per developer con conoscenza di Express. È libera di essere riprodotta e modificata.
+This repository contains the code for the Curlew website (built with Curlew, of course), currently live at https://curlew.mattdev.it/
 
-## Guida utente
+If you're interested in using Curlew for your projects or would just like to check it out, please visit the website above.
 
-Questa guida presuppone che tu usi VS Code.
+The build repository for the project can be found on my repositories page on GitHub.
 
-1. Naviga nella directory in cui vuoi salvare il codice.
-2. Fai click su "Codice" sopra, poi SSH. Copia il codice.
-3. Apri un nuovo terminale su VS Code e scrivi (senza virgolette) "git clone" seguito dal codice che hai copiato. Esegui il comando.
-4. Rinomina il progetto con un nome che si adatta al tuo progetto.
-5. Scrivi "rm -rf .git" nel terminale per rimuovere la cronologia Git.
-6. Poi scrivi "npm install" nel terminale per installare le dipendenze.
-7. Apri il package.json e modificalo per adattarlo al tuo progetto.
-8. Sei prontə per iniziare il tuo blog!
-
-Per creare nuovi post:
-
-1. Apri la directory "posts".
-2. Crea un file con il nome del nuovo post e .md come nei esempi.
-3. Leggi test.md se non sai come scrivere markdown.
-4. Non dimenticare di cancellare i due file "test" e di cambiare le informazioni in index.html.
-
-Per raggiungere le pagine, crea nuovi file HTML e configura app.js.
-
-Una guida su come ho creato questo blog e su come distribuire il tuo blog è in arrivo.
+<img src="public/assets/curlew-icon.svg" alt="curlew" width="300" height="200" />
