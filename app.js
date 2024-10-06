@@ -10,22 +10,6 @@ const PORT = process.env.PORT || 3001;
 app.use(express.static("public"));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-app.get("/guide", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "guide.html"));
-});
-
-app.get("/deploy", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "deploy.html"));
-});
-
-app.get("/posts", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "posts.html"));
-});
-
 app.get("/posts-list", (req, res) => {
   const postsDir = path.join(__dirname, "posts");
   fs.readdir(postsDir, (error, files) => {
@@ -54,6 +38,15 @@ app.get("/posts/:file", (req, res) => {
     }
     const htmlContent = marked(content);
     res.send(htmlContent);
+  });
+});
+
+app.get("/*", (req, res) => {
+  const filePath = path.join(__dirname, "public", req.params[0] + ".html");
+  res.sendFile(filePath, (error) => {
+    if (error) {
+      res.status(404).send("Page not found.");
+    }
   });
 });
 
